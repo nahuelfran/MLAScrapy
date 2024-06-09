@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrapy de mercado libre</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <body id="main">
+        <header>
+            <nav>
+            <ul>
+                <li>
+                <a href="./index.html">
+                <i class="fas fa-film" aria-hidden="true"></i>
+                Scrapy
+                </a>
+                </li>
+            </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+
+            <section class="buscador">
+                <h3 class="SeccionBusqueda">¿Qué estás buscando?</h3>
+                <form class="BusquedaPeliculas" id="formularioBusqueda">
+                    <label for="buscar" class="visually-hidden">Buscar</label>
+                    <input class="ingresarbusqueda" type="text" placeholder="Buscar..." id="buscar" name="buscar" />
+                    <input class="botonBuscar" type="submit" value="Buscar" />
+                </form>
+            </section>
+            
+            <section class="resultados">
+                <h3>Productos más baratos:</h3>
+                <ul id="productosBaratos"></ul>
+            </section>
+        </main>
+        
+        <script src="./js/busqueda.js" defer></script>
+</body>
+</html>
