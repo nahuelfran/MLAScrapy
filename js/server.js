@@ -1,6 +1,6 @@
 const express = require('express');
 const { exec } = require('child_process');
-const cors = require('cors'); // Importa el módulo cors
+const cors = require('cors'); 
 const app = express();
 const path = require('path');
 const fs = require('fs-extra');
