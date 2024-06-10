@@ -1,17 +1,16 @@
 from scrapy.item import Field
 from scrapy.item import Item
 from scrapy.spiders import CrawlSpider, Rule
-from scrapy.selector import Selector
 from scrapy.loader.processors import MapCompose
 from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
-import sys
+
 
 class Articulo(Item):
     titulo = Field()
     precio = Field()
     descripcion = Field()
-    #img = Field()
+    img = Field()
 
 class MLOFERTASCrawler(CrawlSpider):
     name = 'MLOFERTAS'
@@ -24,11 +23,7 @@ class MLOFERTASCrawler(CrawlSpider):
 
     allowed_domains = ['listado.mercadolibre.com.ar','www.mercadolibre.com.ar', 'articulo.mercadolibre.com.ar']
     
-    #texto=f"{sys.argv[1]}"
-    #texto = "condones"
-    #busqueda =f"https://listado.mercadolibre.com.ar/{texto}"
-    #start_urls = [busqueda]
-    
+
     def __init__(self, termino='', *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.start_urls = [f'https://listado.mercadolibre.com.ar/{termino}']
@@ -63,7 +58,7 @@ class MLOFERTASCrawler(CrawlSpider):
             item.add_value('titulo', titulo)
             item.add_xpath('descripcion', '//p[@class="ui-pdp-description__content"]/text()',MapCompose(self.limpiarTexto))
             item.add_xpath('precio', '(//span[@class="andes-money-amount ui-pdp-price__part andes-money-amount--cents-superscript andes-money-amount--compact"]//span[@class="andes-money-amount__fraction"]/text())[1]')
-            #item.add_xpath('img','//figure[@class="ui-pdp-gallery__figure"]/img/text())')
+            item.add_xpath('img','(//span[@class="ui-pdp-gallery__wrapper"]//figure[@class="ui-pdp-gallery__figure"]//img//@src)[1]')
             
             yield item.load_item()
 

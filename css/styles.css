@@ -1,18 +1,122 @@
-/* Reset CSS para asegurar consistencia entre navegadores */
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ffff00;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.main {
+    padding: 20px;
+}
+
+.buscador {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.SeccionBusqueda {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.ingresarbusqueda {
+    padding: 10px;
+    width: 70%;
+    max-width: 500px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.botonBuscar {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffff00;
+    color: black;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.botonBuscar:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.resultados h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.resultados ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resultados li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.resultados li img {
+    max-width: 100px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5em;
+    color:  black;
+}
+.buscador .loading-icon {
+    display: none;
+    font-size: 1.5em;
+    color:  black;
+    margin-left: 10px;
+}
+/* Reset CSS para asegurar consistencia entre navegadores 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo para el cuerpo */
+/* Estilo para el cuerpo 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Estilo para el encabezado y la navegación */
+/* Estilo para el encabezado y la navegación 
 header {
     background-color: #333;
     padding: 10px 0;
@@ -38,7 +142,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilo para la sección principal */
+/* Estilo para la sección principal 
 .main {
     max-width: 800px;
     margin: 20px auto;
@@ -48,7 +152,7 @@ nav ul li a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para la sección del buscador */
+/* Estilo para la sección del buscador 
 .buscador {
     text-align: center;
 }
@@ -86,3 +190,4 @@ nav ul li a:hover {
 .botonBuscar:hover {
     background-color: #0056b3;
 }
+*/
