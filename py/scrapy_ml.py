@@ -28,6 +28,7 @@ class MLOFERTASCrawler(CrawlSpider):
     #texto = "condones"
     #busqueda =f"https://listado.mercadolibre.com.ar/{texto}"
     #start_urls = [busqueda]
+    
     def __init__(self, termino='', *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.start_urls = [f'https://listado.mercadolibre.com.ar/{termino}']
