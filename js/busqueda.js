@@ -1,6 +1,6 @@
 document.getElementById('formularioBusqueda').addEventListener('submit', function(event) {
     event.preventDefault();
-    const terminoBusqueda = document.getElementById('buscar').value;
+    const terminoBusqueda = document.getElementById('buscar').value.replace(/\s/g, '-');
     console.log('Término de búsqueda enviado:', terminoBusqueda);
     // Limpiar el campo de búsqueda y mostrar el ícono de carga
     document.getElementById('buscar').value = '';
