@@ -30,6 +30,7 @@ app.post('/buscar', async (req, res) => {
             const resultados = JSON.parse(data);
             // Ordena los resultados por precio y toma los tres primeros
             const productosBaratos = resultados.sort((a, b) => Number(a.precio[0].replace(/\./g, '')) - Number(b.precio[0].replace(/\./g, ''))).slice(0, 5);
+            console.log(productosBaratos)
             res.json(productosBaratos);
         } catch (err) {
             console.error(`Error al leer el archivo JSON: ${err}`);
