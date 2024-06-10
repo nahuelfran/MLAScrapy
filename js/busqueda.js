@@ -18,7 +18,7 @@ document.getElementById('formularioBusqueda').addEventListener('submit', functio
         lista.innerHTML = '';  // Limpiar la lista antes de agregar nuevos elementos
         productosBaratos.forEach(producto => {
             const item = document.createElement('li');
-            item.textContent = `${producto.descripcion}: $${producto.precio}`;
+            item.textContent = `${producto.titulo}. A $${producto.precio} Pesos`;
             lista.appendChild(item);
         });
     })

@@ -26,12 +26,12 @@ app.post('/buscar', (req, res) => {
         // Ordena los resultados por precio y toma los tres primeros
         const productosBaratos = resultados.sort((a, b) => a.precio - b.precio).slice(0, 3);
         
-        console.log(productosBaratos)
+        //console.log(productosBaratos)
         
         // Retraso artificial de 5 segundos para depuración
-        setTimeout(() => {
-            res.json(productosBaratos);
-        }, 5000);
+        //setTimeout(() => {
+        res.json(productosBaratos);
+        //}, 5000);
     });
 });
 
