@@ -25,7 +25,6 @@ app.post('/buscar', async (req, res) => {
         try {
             // Esperar a que el archivo sea escrito completamente
             await fs.ensureFile(rutaJson);  // Asegura que el archivo existe
-            await fs.readFile(rutaJson, 'utf8'); // Espera a que el archivo se pueda leer
 
             const data = await fs.readFile(rutaJson, 'utf8');
             const resultados = JSON.parse(data);
