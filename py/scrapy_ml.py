@@ -61,5 +61,3 @@ class MLOFERTASCrawler(CrawlSpider):
             item.add_xpath('img','(//span[@class="ui-pdp-gallery__wrapper"]//figure[@class="ui-pdp-gallery__figure"]//img//@src)[1]')
             
             yield item.load_item()
-
-    #Scrapeo
